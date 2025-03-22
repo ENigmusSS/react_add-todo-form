@@ -75,7 +75,7 @@ export const AddTodoForm: React.FC<Props> = ({ users, onAdd, maxId }) => {
         <select
           data-cy="userSelect"
           title="userSelect"
-          defaultValue={0}
+          defaultValue={'0'}
           value={newTodo.userId}
           onChange={event => {
             //setUsersTouched(false);
@@ -89,9 +89,9 @@ export const AddTodoForm: React.FC<Props> = ({ users, onAdd, maxId }) => {
           }}
           //onBlur={() => setUsersTouched(true)}
         >
-          <option value={0}>Choose a user</option>
+          <option value={'0'}>Choose a user</option>
           {users.map(user => (
-            <option key={user.id} value={user.id}>
+            <option key={user.id} value={String(user.id)}>
               {user.name}
             </option>
           ))}
